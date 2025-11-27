@@ -98,6 +98,7 @@ body {
   color: #000;
   font-weight: 500;
   font-size: 1rem;
+  text-shadow: 1px -1px 1px #eee;
 }
 
 /* ========= HERO — MATCHING THE EXAMPLE ========= */
@@ -264,5 +265,889 @@ body {
     width: 100px;
     height: 100px;
     border: solid 7px #000;
+  }
+}
+
+/* ========= Coaching Offer Section ========= */
+.coaching-offer {
+  max-width: 1200px;
+  margin: 4rem auto;
+  background: linear-gradient(135deg, #ffffff 0%, #f0fdf9 50%, #f8fffe 100%);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 119, 182, 0.12), 0 0 1px rgba(0, 0, 0, 0.1);
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  border: 2px solid rgba(0, 158, 96, 0.25);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.coaching-offer::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 158, 96, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  animation: float 6s ease-in-out infinite;
+}
+
+.coaching-offer::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 119, 182, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(20px); }
+}
+
+.coaching-offer-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.coaching-offer h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #0a1f2e;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.coaching-offer .subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+.coaching-offer .content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.coaching-offer .price-container {
+  padding: 2rem 2.5rem;
+  background: linear-gradient(135deg, rgba(0, 158, 96, 0.12) 0%, rgba(0, 119, 182, 0.08) 100%);
+  border-radius: 15px;
+  border: 2px solid rgba(0, 158, 96, 0.3);
+}
+
+.coaching-offer .price-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.coaching-offer .old-price {
+  font-size: 1.5rem;
+  color: #aaa;
+  text-decoration: line-through;
+  font-weight: 500;
+  text-decoration-thickness: 2px;
+}
+
+.coaching-offer .price-divider {
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(180deg, transparent, #ccc, transparent);
+}
+
+.coaching-offer .new-price {
+  font-size: 3.5rem;
+  color: #009e60;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  letter-spacing: -1px;
+}
+
+.coaching-offer .price-label {
+  font-size: 0.95rem;
+  color: #009e60;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.coaching-offer .right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.coaching-offer .details {
+  font-size: 1.15rem;
+  color: #444;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+.coaching-offer .details strong {
+  color: #009e60;
+  font-weight: 700;
+}
+
+.coaching-offer .features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.coaching-offer .feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #555;
+  text-align: left;
+}
+
+.coaching-offer .feature-item::before {
+  content: '✓';
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #009e60 0%, #007744 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.coaching-offer .cta-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #009e60 0%, #007744 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0, 158, 96, 0.3);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  border: 2px solid transparent;
+}
+
+.coaching-offer .cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 158, 96, 0.4);
+}
+
+.coaching-offer .cta-btn:active {
+  transform: translateY(-1px);
+}
+
+.coaching-offer svg {
+  position: absolute;
+  z-index: 1;
+}
+
+.coaching-offer svg.accent-top-right {
+  top: 30px;
+  right: 40px;
+  width: 180px;
+  height: 180px;
+  opacity: 0.52;
+}
+
+.coaching-offer svg.accent-bottom-left {
+  bottom: 30px;
+  left: 40px;
+  width: 140px;
+  height: 140px;
+  opacity: 0.5;
+}
+
+@media (max-width: 1000px) {
+  .coaching-offer .content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .coaching-offer .right-content {
+    align-items: center;
+    text-align: center;
+  }
+  .coaching-offer .feature-item {
+    justify-content: left;
+  }
+  .coaching-offer .cta-btn {
+    align-self: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .coaching-offer {
+    padding: 2rem 1.5rem;
+    margin: 2rem auto;
+  }
+  .coaching-offer h2 {
+    font-size: 2rem;
+  }
+  .coaching-offer-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+  }
+  .coaching-offer .subtitle {
+    font-size: 1rem;
+  }
+  .coaching-offer .price-container {
+    padding: 1.5rem;
+  }
+  .coaching-offer .price-row {
+    gap: 1rem;
+  }
+  .coaching-offer .new-price {
+    font-size: 2.2rem;
+  }
+  .coaching-offer .old-price {
+    font-size: 1rem;
+  }
+  .coaching-offer .details {
+    font-size: 1rem;
+  }
+  .coaching-offer .cta-btn {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+  .coaching-offer svg {
+    display: none;
+  }
+  .coaching-offer::before,
+  .coaching-offer::after {
+    display: none;
+  }
+}
+
+/* ========= Why Coaching Section ========= */
+.why-coaching {
+  max-width: 100%;
+  margin: 0;
+  padding: 4rem 1.5rem;
+  position: relative;
+  overflow: visible;
+}
+
+.why-coaching h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #0a1f2e;
+  text-align: center;
+  margin-bottom: 4rem;
+  letter-spacing: -1px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.why-coaching-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3rem;
+  align-items: flex-start;
+  min-height: 550px;
+  padding: 2rem 3rem;
+}
+
+.why-coaching-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.coaching-point {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.coaching-point:nth-child(odd) {
+  margin-top: 2rem;
+}
+
+.coaching-point:nth-child(even) {
+  margin-top: 6rem;
+}
+
+.point-icon {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #009e60 0%, #007744 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 158, 96, 0.2);
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.point-icon:hover {
+  transform: scale(1.1);
+}
+
+.point-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0a1f2e;
+  margin-bottom: 1rem;
+}
+
+.point-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+.person-start {
+  position: absolute;
+  top: 90px;
+  left: 1%;
+  z-index: 2;
+  font-size: 4rem;
+}
+
+@media (max-width: 1200px) {
+  .why-coaching-container {
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 650px;
+    gap: 2.5rem;
+    padding: 2rem 2rem;
+  }
+  
+  .coaching-point:nth-child(4),
+  .coaching-point:nth-child(5) {
+    margin-top: 2rem;
+  }
+
+  .why-coaching-svg {
+    display: none;
+  }
+
+  .person-start {
+    display: none;
+  }
+
+  .coaching-point:nth-child(2n) {
+    margin-top: 2rem;
+  }
+
+  .point-icon {
+    width: 100px;
+    height: 100px;
+    font-size: 2.8rem;
+  }
+
+  .point-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-coaching {
+    margin: 4rem 0;
+    padding: 3rem 1.5rem;
+  }
+
+  .why-coaching h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .why-coaching-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    min-height: auto;
+    padding: 1.5rem 1rem;
+  }
+
+  .coaching-point:nth-child(odd),
+  .coaching-point:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .point-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .point-title {
+    font-size: 1rem;
+  }
+
+  .point-description {
+    font-size: 0.9rem;
+  }
+
+  .why-coaching-svg {
+    display: none;
+  }
+
+  .person-start {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-coaching-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .why-coaching h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .point-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+  }
+
+  .point-title {
+    font-size: 0.95rem;
+  }
+
+  .point-description {
+    font-size: 0.85rem;
+  }
+}
+
+/* ========= Meet Our Coaches Section ========= */
+.coaches-section {
+  max-width: 100%;
+  margin: 0;
+  padding: 6rem 1.5rem;
+  position: relative;
+  overflow: visible;
+}
+
+.coaches-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 158, 96, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  animation: drift 8s ease-in-out infinite;
+}
+
+.coaches-section::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 119, 182, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  animation: drift 10s ease-in-out infinite reverse;
+}
+
+.coaches-section svg.flow-line {
+  position: absolute;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.coaches-section svg.flow-line-top {
+  top: 5%;
+  left: -5%;
+  width: 110%;
+  height: 200px;
+  animation: flow-animation 6s linear infinite;
+}
+
+.coaches-section svg.flow-line-middle {
+  top: 45%;
+  left: -5%;
+  width: 110%;
+  height: 180px;
+  animation: flow-animation 8s linear infinite reverse;
+  opacity: 0.12;
+}
+
+.coaches-section svg.flow-line-bottom {
+  bottom: 10%;
+  left: -5%;
+  width: 110%;
+  height: 200px;
+  animation: flow-animation 7s linear infinite;
+  opacity: 0.1;
+}
+
+@keyframes flow-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes drift {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(50px, -50px);
+  }
+}
+
+.coaches-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #0a1f2e;
+  text-align: center;
+  margin-bottom: 4rem;
+  letter-spacing: -1px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.coaches-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  align-items: stretch;
+  position: relative;
+  z-index: 1;
+}
+
+.coach-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fffe 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 119, 182, 0.1);
+  border: 1px solid rgba(0, 158, 96, 0.15);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.coach-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 119, 182, 0.15);
+}
+
+.coach-headshot {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, #00b8a0 0%, #008a53 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+.coach-headshot img {
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.coach-content {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.coach-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #0a1f2e;
+  margin: 0 0 0.5rem 0;
+}
+
+.coach-title {
+  font-size: 1rem;
+  color: #009e60;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.coach-certification {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 158, 96, 0.2);
+}
+
+.coach-bio {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+}
+
+@media (max-width: 1000px) {
+  .coaches-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .coach-card {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .coaches-section {
+    margin: 4rem auto;
+  }
+
+  .coaches-section h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .coach-headshot {
+    height: 250px;
+    font-size: 4rem;
+  }
+
+  .coach-content {
+    padding: 2rem;
+  }
+
+  .coach-name {
+    font-size: 1.5rem;
+  }
+
+  .coach-bio {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .coaches-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .coach-headshot {
+    height: 200px;
+    font-size: 3rem;
+  }
+
+  .coach-content {
+    padding: 1.5rem;
+  }
+
+  .coach-name {
+    font-size: 1.2rem;
+  }
+
+  .coach-title {
+    font-size: 0.9rem;
+  }
+
+  .coach-certification {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .coach-bio {
+    font-size: 0.85rem;
+  }
+}
+
+/* ========= Footer ========= */
+footer {
+  background: #0a1f2e;
+  color: #fff;
+  padding: 4rem 1.5rem 2rem;
+  margin-top: 6rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-section h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #00b8a0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-section a {
+  color: #b3b3b3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-section a:hover {
+  color: #00b8a0;
+}
+
+.footer-section p {
+  color: #b3b3b3;
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.footer-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 2rem 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: rgba(0, 184, 160, 0.2);
+  border-radius: 50%;
+  color: #00b8a0;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: #00b8a0;
+  color: #0a1f2e;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 1000px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
   }
 }
