@@ -10,7 +10,12 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background: var(--background-color);
+}
+
+html, body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
 }
 
 /* ========= Top Bar ========= */
