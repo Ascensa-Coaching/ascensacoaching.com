@@ -9,20 +9,22 @@
 </head>
 <body>
 
+<!-- anchor so #home goes to the very top of the page -->
+<div id="home" aria-hidden="true"></div>
+
 <!-- ==================== TOP CONTACT BAR ==================== -->
 <div class="topbar">
   <div class="topbar-content">
     <div class="top-left">
       <span>📞 +1 (336) 964-9619</span>
       <span class="sep"></span>
-      <span>✉️ coaching@ascensacoaching.com</span>
+      <span>✉️ connect@ascensacoaching.com</span>
     </div>
 
     <div class="top-right">
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt=""></a>
-      <!-- <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt=""></a> -->
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt=""></a>
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt=""></a>
+      <a href="https://www.facebook.com/people/Ascensa-Coaching/61584138345445/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt=""></a>
+      <a href="https://www.linkedin.com/company/ascensa-coaching/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt=""></a>
+      <a href="https://www.instagram.com/ascensacoaching" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt=""></a>
     </div>
   </div>
 </div>
@@ -37,11 +39,11 @@
 <!-- ==================== NAVIGATION ==================== -->
 <nav class="navbar">
   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Pricing</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Coaches</a></li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#coaches">Coaches</a></li>
   </ul>
 </nav>
 
@@ -63,7 +65,7 @@
 </section>
 
 <!-- ==================== Pricing ==================== -->
-<section class="coaching-offer">
+<section id="pricing" class="coaching-offer">
   <svg class="accent-top-right" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -122,8 +124,74 @@
   </div>
 </section>
 
+<!-- ==================== Services ==================== -->
+<section id="services" class="services-section">
+  <div class="services-inner">
+    <h2>Our Services</h2>
+    <p class="services-intro">Tailored coaching packages to help leaders, individuals, and organizations reach their goals.</p>
+
+    <div class="services-grid">
+      <article class="service-card" aria-labelledby="svc-exec">
+        <div class="service-media" style="background-image:url('assets/images/redd-francisco-5U_28ojjgms-unsplash.jpg');" role="img" aria-label="Executive coaching"></div>
+        <div class="service-body">
+          <h3 id="svc-exec">Executive Coaching</h3>
+          <p>One-on-one executive coaching focused on leadership presence, strategic decision-making, and organizational influence for senior leaders.</p>
+          <ul class="service-features">
+            <li>Private leadership sessions</li>
+            <li>Board & stakeholder coaching</li>
+            <li>Executive communication</li>
+          </ul>
+          <!-- <a class="service-cta" href="#contact">Learn More</a> -->
+        </div>
+      </article>
+
+      <article class="service-card" aria-labelledby="svc-personal">
+        <div class="service-media" style="background-image:url('assets/images/docusign-7RWBSYA9Rro-unsplash.jpg');" role="img" aria-label="Personal coaching"></div>
+        <div class="service-body">
+          <h3 id="svc-personal">Personal Coaching</h3>
+          <p>Personal development coaching for career transitions, work-life balance, confidence building, and long-term goal planning.</p>
+          <ul class="service-features">
+            <li>Career transitions</li>
+            <li>Confidence & mindset</li>
+            <li>Life planning</li>
+          </ul>
+          <!-- <a class="service-cta" href="#contact">Learn More</a> -->
+        </div>
+      </article>
+
+      <article class="service-card" aria-labelledby="svc-smallbiz">
+        <div class="service-media" style="background-image:url('assets/images/annie-spratt-QckxruozjRg-unsplash.jpg');" role="img" aria-label="Small business coaching"></div>
+        <div class="service-body">
+          <h3 id="svc-smallbiz">Small Business Coaching</h3>
+          <p>Hands-on coaching to help small business owners scale, improve team performance, and implement practical leadership systems.</p>
+          <ul class="service-features">
+            <li>Scaling strategies</li>
+            <li>Team & ops coaching</li>
+            <li>Community focus</li>
+          </ul>
+          <!-- <a class="service-cta" href="#contact">Learn More</a> -->
+        </div>
+      </article>
+
+      <article class="service-card" aria-labelledby="svc-nonprofit">
+        <div class="service-media" style="background-image:url('assets/images/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg');" role="img" aria-label="Non-profit coaching"></div>
+        <div class="service-body">
+          <h3 id="svc-nonprofit">Non‑profit Coaching</h3>
+          <p>Mission-focused coaching to strengthen leadership, governance, and ethical decision-making within non-profit organizations.</p>
+          <ul class="service-features">
+            <li>Board & governance</li>
+            <li>Mission-driven strategy</li>
+            <li>Stakeholder alignment</li>
+          </ul>
+          <!-- <a class="service-cta" href="#contact">Learn More</a> -->
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ==================== Why Coaching Section ==================== -->
-<section class="why-coaching">
+<section id="about" class="why-coaching">
   <h2>Why Coaching?</h2>
   
   <div class="why-coaching-container">
@@ -178,7 +246,7 @@
 </section>
 
 <!-- ==================== Meet Our Coaches Section ==================== -->
-<section class="coaches-section">
+<section id="coaches" class="coaches-section">
   <svg class="flow-line flow-line-top" viewBox="0 0 1200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="flowGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -249,7 +317,7 @@
     <div class="coach-card">
       <div class="coach-headshot">
         <!-- 👨‍💼 -->
-        <img src="assets/images/Ascensa_pic-removebg-preview.png" alt="Michael Parenti">
+        <img src="assets/images/Ascensa Pic (edited).png" alt="Michael Parenti">
       </div>
       <div class="coach-content">
         <h3 class="coach-name">Michael Parenti</h3>
@@ -294,20 +362,18 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#services">Services</a></li>
         <li><a href="#coaches">Our Coaches</a></li>
       </ul>
     </div>
-
+    
     <div class="footer-section">
       <h3>Services</h3>
       <ul>
-        <li><a href="#">Leadership Coaching</a></li>
-        <li><a href="#">Life Coaching</a></li>
+        <li><a href="#services">Learn More</a></li>
       </ul>
     </div>
 
-    <div class="footer-section">
+    <div class="footer-section" id="contact">
       <h3>Contact</h3>
       <p>
         <strong>Phone:</strong><br>
@@ -315,7 +381,7 @@
       </p>
       <p>
         <strong>Email:</strong><br>
-        <a href="mailto:life@ascensacoaching.com">life@ascensacoaching.com</a>
+        <a href="mailto:connect@ascensacoaching.com">connect@ascensacoaching.com</a>
       </p>
     </div>
   </div>
@@ -325,9 +391,9 @@
   <div class="footer-bottom">
     <p>&copy; <span id="year"></span> Ascensa Coaching. All rights reserved.</p>
     <div class="footer-social">
-      <a href="#" title="Facebook">f</a>
-      <a href="#" title="LinkedIn">in</a>
-      <a href="#" title="Instagram">📷</a>
+      <a href="https://www.facebook.com/people/Ascensa-Coaching/61584138345445/" target="_blank" title="Facebook">f</a>
+      <a href="https://www.linkedin.com/company/ascensa-coaching/" target="_blank" title="LinkedIn">in</a>
+      <a href="https://www.instagram.com/ascensacoaching" target="_blank" title="Instagram">📷</a>
     </div>
   </div>
 </footer>
