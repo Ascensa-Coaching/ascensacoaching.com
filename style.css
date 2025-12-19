@@ -70,7 +70,7 @@ html, body {
 .logo-placeholder {
   width: 150px;
   height: 150px;
-  background: url('assets/images/Ascensa\ Logo\ BoB.png') no-repeat center/contain;
+  background: url('assets/images/Ascensa\ Logo\ BoB.png') no-repeat center/cover;
   position: absolute;
   top: 10px;     /* NOW ALIGNED TO BLUE BLOCK LIKE THE EXAMPLE */
   left: 1.5rem;
