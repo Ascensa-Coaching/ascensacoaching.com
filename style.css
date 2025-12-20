@@ -1367,4 +1367,8 @@ footer {
   .hero-img-container img {
     width: 100%;
   }
+
+  #trouble {
+    width: 100%;
+  }
 }
