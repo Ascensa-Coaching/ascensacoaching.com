@@ -1265,6 +1265,7 @@ footer {
   margin: .5rem 0 1rem;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   gap: .5rem 1rem;
 }
 
@@ -1274,6 +1275,7 @@ footer {
   padding: .35rem .6rem;
   border-radius: 999px;
   font-size: .85rem;
+  width: fit-content;
 }
 
 /* CTA */
