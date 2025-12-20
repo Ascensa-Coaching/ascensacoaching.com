@@ -1362,3 +1362,9 @@ footer {
     opacity: 1 !important;
   }
 }
+
+@media (max-width: 1400) {
+  .hero-img-container img {
+    width: 100%;
+  }
+}
