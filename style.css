@@ -124,10 +124,15 @@ html, body {
   flex-direction: column;
   justify-content: space-around;
 }
+  .hero-text div {
+    max-width: 75%;
+    /* max-width: 500px; */
+  }
 
 @media (max-width: 1500px) {
   .hero-text div {
-    max-width: 500px;
+    max-width: 50%;
+    /* max-width: 500px; */
   }
 }
 
@@ -241,6 +246,10 @@ html, body {
 }
 
 @media (max-width: 500px) {
+  .hero-text div {
+    max-width: 100%;
+    /* max-width: 500px; */
+  }
   .hero-text {
     padding: 2rem 1rem;
     text-align: center;
