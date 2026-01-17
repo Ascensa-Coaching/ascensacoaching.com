@@ -113,6 +113,23 @@ html, body {
   display: grid;
   grid-template-columns: 3fr 1fr;
   height: 750px;
+  position: relative; /* added so absolute .hero-front is positioned to the hero */
+}
+
+/* Ensure front layer fills the hero vertically */
+.hero-front {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; /* keep positioning consistent if inline style removed */
+  display: flex;      /* preserve front-layer layout if relying on CSS */
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 10;
 }
 
 /* LEFT BLOCK — green */
@@ -136,27 +153,33 @@ html, body {
   }
 }
 
-.hero-text h1 {
+.hero-front {
+  height: 100%;
+  width: calc(100% - 150px);
+  padding: 50px 50px 100px 50px;
+}
+
+.hero-front-left h1 {
   margin: 0;
   font-size: 5rem;
   font-weight: 700;
   font-family: "Playfair Display", serif;
 }
 
-.hero-text p {
+.hero-front-left p {
   font-size: 1.6rem;
   font-weight: 300;
   max-width: 800px;
 }
 
-.hero-text p span {
+.hero-front-left p span {
   font-weight: 600;
   font-size: 1.8rem;
   transform: rotateY(-15deg);
   text-decoration: underline;
 }
 
-.hero-text p img {
+.hero-front-right p img {
   width: 75px;
   vertical-align: middle;
   margin: 1px 0 0 -20px;
@@ -204,12 +227,21 @@ html, body {
     justify-content: center;
     width: 100%;
     padding: 2rem 0 4rem 0;
+    height: 40vh;
   }
 
   .hero-img-container img {
     width: 100%;
     height: auto;
     right: 0;
+  }
+
+  .hero-front {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0 0 0;
+    width: 100%;
   }
 
   .logo-placeholder {
@@ -250,21 +282,30 @@ html, body {
     max-width: 100%;
     /* max-width: 500px; */
   }
-  .hero-text {
-    padding: 2rem 1rem;
+  .hero-front {
+    padding: 2rem 0rem !important;
+    text-align: center;
+    height: fit-content !important;
+  }
+  .hero-front-left {
+    pointer-events: auto;
+    color: white;
     text-align: center;
   }
-  .hero-text h1 {
+  .hero-front-left > div:nth-child(1) {
+    max-width: 100% !important;
+  }
+  .hero-front-left h1 {
     font-size: 2.5rem;
   }
-  .hero-text p {
+  .hero-front-left p {
     font-size: 1rem;
   }
-  .hero-text p span {
+  .hero-front-left p span {
     font-size: 1rem;
   }
-  .hero-text p img {
-    width: 40px;
+  .hero-front-left p img {
+    width: 50px !important;
     margin: 1px 0 0 -15px;
   }
   .hero-btn {
@@ -279,6 +320,10 @@ html, body {
     width: 100px;
     height: 100px;
     border: solid 7px #000;
+  }
+  .hero-img-container {
+    /* padding: 1rem 0 2rem 0; */
+    /* height: 50%; */
   }
 }
 

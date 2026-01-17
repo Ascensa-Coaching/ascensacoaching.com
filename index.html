@@ -50,16 +50,41 @@
 
 <!-- ==================== HERO SECTION ==================== -->
 <section class="hero">
-  <div class="hero-text reveal fade-up">
-    <div>
+
+  <!-- keep original grid children to preserve background artwork and spacing,
+       but hide their inner content so they act as layout/background placeholders -->
+  <div class="hero-text" aria-hidden="true">
+    <!-- original inner content moved to front layer; keep an empty container so background stays -->
+    <div style="visibility:hidden;">
       <h1>ASCENSA COACHING</h1>
       <p>Helping people <strong><i><span>ASCEND</span></i></strong> <img src="assets/images/Arrow.png" alt=""> to their highest potential. </p>
+      <a href="https://forms.gle/ZVkZhmfpvot7rucK8" target="_blank" class="hero-btn">Get Started</a>
     </div>
-    <a href="https://forms.gle/ZVkZhmfpvot7rucK8" target="_blank" class="hero-btn">Get Started</a>
   </div>
 
-  <div class="hero-img-container reveal fade-right">
-    <img src="assets/images/Ascensa Cover Pic.jpg" id="trouble" alt="">
+  <div class="hero-img-container" aria-hidden="true">
+    <!-- keep as placeholder so grid/spacing stays identical -->
+    <!-- <img src="assets/images/Ascensa Cover Pic.jpg" id="trouble" alt="" style="visibility:hidden;"> -->
+  </div>
+
+  <!-- front layer: absolute flex row placed on top of the background placeholders.
+       Uses inline styles only so no CSS file changes are required. -->
+  <div class="hero-front" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:space-between; padding:4rem 1.5rem; z-index:10; pointer-events:none;">
+
+    <!-- LEFT: visible text column (flex 3 to match 3fr) -->
+    <div class="hero-front-left" style="flex:1.5 1 0%; pointer-events:auto; color:white;">
+      <div style="max-width:75%;">
+        <h1 class="reveal fade-up">ASCENSA COACHING</h1>
+        <p class="reveal fade-up">Helping people <strong><i><span>ASCEND</span></i></strong> <img src="assets/images/Arrow.png" alt="" style="width:75px; vertical-align:middle; margin-left:-20px;"> to their highest potential.</p>
+        <a href="https://forms.gle/ZVkZhmfpvot7rucK8" target="_blank" class="hero-btn reveal fade-up" style="margin-top:2rem; display:inline-block; pointer-events:auto;">Get Started</a>
+      </div>
+    </div>
+
+    <!-- RIGHT: visible image column (flex 1 to match 1fr) -->
+    <div class="hero-front-right" style="flex:1 1 0%; display:flex; align-items:center; justify-content:flex-end; pointer-events:auto;">
+      <img src="assets/images/Ascensa Cover Pic.jpg" alt="" class="reveal fade-right" style="width:150%; height:75%; object-fit:cover; right:calc(50% - 1.5rem); pointer-events:none;">
+    </div>
+
   </div>
 </section>
 
