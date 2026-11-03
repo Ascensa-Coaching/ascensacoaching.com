@@ -7,7 +7,7 @@ const PEOPLE = [
     name: 'Michael Parenti',
     credential: 'John Maxwell Certified Coach',
     accent: 'text-mint',
-    photo: 'https://ascensacoaching.com/assets/images/Ascensa%20Pic%20(edited).png',
+    photo: `${import.meta.env.BASE_URL}assets/images/Ascensa%20Pic%20(edited).png`,
     bio: 'A John Maxwell Certified Coach with more than two decades of leadership and consulting experience, Michael pairs proven coaching methodology with practical technical strategy. He works where organizational decisions meet real systems, helping owners, managers, and technical leads clarify how work is owned, who decides, and how to keep critical knowledge from residing in a single person.',
     tags: ['Leadership coaching', 'Organizational systems', 'Technical strategy'],
   },
@@ -17,7 +17,7 @@ const PEOPLE = [
     credential: 'Leadership, Ethics & Engineering',
     accent: 'text-flow',
     photo:
-      'https://ascensacoaching.com/assets/images/Profile_Picture__mparenti_-removebg-preview(actual).png',
+      `${import.meta.env.BASE_URL}assets/images/Profile_Picture__mparenti_-removebg-preview(actual).png`,
     bio: 'Michael brings a consulting perspective shaped by work across several engineering disciplines — systems, multimedia, and technical operations — together with formal study in leadership and ethics. He advises technical teams on judgment and practical leadership habits, and counsels on the systems themselves: recording and live audio chains, network and infrastructure design, and the software that connects them.',
     tags: ['Audio engineering', 'Networking', 'Software advisory', 'Music production'],
   },

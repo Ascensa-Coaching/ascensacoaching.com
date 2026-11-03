@@ -1,8 +1,7 @@
 import { ArrowUpRight } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 
-const MARK =
-  'https://media.base44.com/images/public/user_69f91c5a08641364e340caf5/eca752904_AscensaLogoWoB.png';
+const MARK = `${import.meta.env.BASE_URL}assets/images/Ascensa%20Logo%20WoB.png`;
 
 const DISCIPLINES = [
   'Leadership coaching',

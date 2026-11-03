@@ -1,7 +1,6 @@
 import { Image } from '@/components/ui/image';
 
-const IMG =
-  'https://media.base44.com/images/public/6ae9269c32129a24b4e72ce7/c44d2e520_generated_image.png';
+const IMG = `${import.meta.env.BASE_URL}assets/images/Ascensa%20Cover%20Pic.jpg`;
 
 const CAPTIONS = [
   { n: '01', label: 'Signal chains' },
